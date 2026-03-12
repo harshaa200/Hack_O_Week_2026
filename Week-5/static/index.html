@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>HVAC Optimization in Labs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <nav class="top-nav">
+        <div class="nav-left">
+            <i class="fa-solid fa-snowflake"></i>
+            <span class="logo">HVAC Smart Lab</span>
+        </div>
+        <div class="nav-right">
+            <span class="status-badge"><span class="status-dot"></span> System Active</span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>HVAC Optimization Dashboard</h1>
+        <p>AI‑Driven Cooling Analysis using Decision Trees, Zone Heatmaps and Occupancy Insights</p>
+    </section>
+
+    <main class="container">
+
+        <section class="kpi-section">
+            <h2 class="section-title"><i class="fa-solid fa-chart-line"></i> System KPIs</h2>
+            <div class="dashboard-grid three-col" id="kpiCards">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <h2 class="section-title"><i class="fa-solid fa-th"></i> Cooling Heatmap</h2>
+            <p class="sub">Predicted cooling demand across zones and hours</p>
+
+            <div class="card full-width">
+                <div id="heatChart" class="chart-container">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-grid">
+            <div class="card">
+                <h3 class="card-title"><i class="fa-solid fa-ranking-star"></i> Feature Importance</h3>
+                <div id="fiChart" class="chart-container">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title"><i class="fa-solid fa-temperature-half"></i> Outdoor Temperature vs Cooling</h3>
+                <div id="tempChart" class="chart-container">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-grid">
+            <div class="card">
+                <h3 class="card-title"><i class="fa-solid fa-users"></i> Occupancy vs Cooling</h3>
+                <div id="occChart" class="chart-container">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title"><i class="fa-solid fa-clock"></i> Hourly Cooling by Zone</h3>
+                <div id="hourlyChart" class="chart-container">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>AI HVAC Optimization Dashboard • Smart Energy Labs</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
